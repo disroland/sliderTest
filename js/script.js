@@ -19,7 +19,6 @@ $(document).ready(function(){
 		console.log(i);
 
 	}
-	buttons.addEventListener('click', function(){
 		$('#previous').on('click', function(){
 			if (i>0) {i=i-1;
 			sld();} else {i=im.length-1; sld();}
@@ -29,4 +28,3 @@ $(document).ready(function(){
 			sld();} else {i=0; sld();}
 		})
 	})
-})
