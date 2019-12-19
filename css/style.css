@@ -53,21 +53,23 @@ div img {
 	display: block;
 	opacity: .5;
 	top: 0;
-	left: -150px;
+	left: 0;
+	transform: translateX(-200px);
 	top:80px;
 	z-index: 5;
 	width: 100px;
-	
+	transition: .3s;
 
 }
 .wrap .right {	
 	display: block;
 	opacity: .5;
 	top: 0;
-	right: -150px;
 	top:80px;
+	right: 0;
+	transform: translateX(200px);
 	z-index: 5;
 	width: 100px;
-	
+	transition: .3s;
 	
 }
