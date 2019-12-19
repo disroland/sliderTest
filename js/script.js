@@ -2,6 +2,7 @@
 $(document).ready(function(){
 	let im =document.querySelectorAll('.wrap div');
 	let buttons=document.querySelector('.buttons');
+	let p=document.querySelector('#previous');
 		let i=1;
 		sld();
 		function sld(){
@@ -17,14 +18,28 @@ $(document).ready(function(){
 				k=i+1;
 		if (i<im.length-1){$(im[k]).addClass('right')} else {$(im[0]).addClass('right')}
 		console.log(i);
+		}
+	
+		function prev(){$('#previous').on('click', function(){
+			if (i>0) {i=i-1;
+			sld();} else {i=im.length-1; sld();}
+		})}
+		function nxt(){	$('#next').on('click', function(){
+			if (i<im.length-1) {i=i+1;
+			sld();} else {i=0; sld();}
+		})}
 
-	}
-		$('#previous').on('click', function(){
+		nxt();
+		prev();
+
+	document.querySelector('div').addEventListener('mouseup', function(){
+		$('.left').on('click', function(){
 			if (i>0) {i=i-1;
 			sld();} else {i=im.length-1; sld();}
 		});
-		$('#next').on('click', function(){
+		$('.right').on('click', function(){
 			if (i<im.length-1) {i=i+1;
 			sld();} else {i=0; sld();}
-		})
+		});
 	})
+})
